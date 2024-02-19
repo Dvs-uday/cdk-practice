@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="speakerRepository" class="com.project1.repository.Stubspeakerrepositoryimpl" />
+
+    <bean name="speakerService" class="com.project1.service.SpeakerServiceimpl" autowire="constructor">
+    <!-- Here we have used autowiring by constructor type -->
+
+
+        <!--<constructor-arg index="0" ref="speakerRepository" />  -->
+        
+        <!--
+        <property name="speakerRepository" ref="speakerRepository" /> -->
+
+
+        <!-- *Here it take another bean as reference which means it uses dependency injection -->
+    </bean>
+
+</beans>
